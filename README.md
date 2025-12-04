@@ -10,8 +10,8 @@ A simple overview of your stats from the past over the past year:
 
 **Linux**: ```/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db```
 
-3. Use a SQLite browser (like DB Browser for SQLite) to open the database.
-4. Run the below SQL query:
+2. Use a SQLite browser (like DB Browser for SQLite) to open the database.
+3. Run the below SQL query:
 ```
 SELECT 
     track.title as title,
