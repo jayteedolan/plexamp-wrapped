@@ -26,8 +26,10 @@ JOIN metadata_items track ON metadata_item_views.guid = track.guid
 JOIN metadata_items album ON track.parent_id = album.id
 JOIN metadata_items artist ON album.parent_id = artist.id
 WHERE track.metadata_type = 10
+  AND strftime('%Y', metadata_item_views.viewed_at, 'unixepoch', 'localtime') = strftime('%Y', 'now', 'localtime')
 ORDER BY metadata_item_views.viewed_at DESC;
 ```
+_Note: the above query will fitler out any results not from the current year which the query is run and does **not** show data from the past 365 days._
 4. Export the result as a CSV file.
 
 ### To start plexamp-wrapped:
