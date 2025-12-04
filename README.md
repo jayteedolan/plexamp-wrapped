@@ -30,6 +30,7 @@ WHERE track.metadata_type = 10
 ORDER BY metadata_item_views.viewed_at DESC;
 ```
 _Note: the above query will fitler out any results not from the current year which the query is run and does **not** show data from the past 365 days._
+
 4. Export the result as a CSV file.
 
 ### To start plexamp-wrapped:
